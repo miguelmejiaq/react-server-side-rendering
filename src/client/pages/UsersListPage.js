@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fecthUsers } from '../actions';
 
-class UsersList extends Component {
+class UsersListPage extends Component {
     componentDidMount(){
         this.props.fecthUsers();
     }
@@ -30,4 +30,7 @@ function loadData(store){
 }
 
 export { loadData }
-export default connect(mapStateToProps, { fecthUsers })(UsersList);
+export default {
+    loadData: loadData,
+    component: connect(mapStateToProps, { fecthUsers })(UsersListPage)
+};
