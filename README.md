@@ -10,9 +10,11 @@ npm install
 
 
 
-## Configure Router
+## Adding authentication
 
-On this section you're going to configure the React routes. Also you see the <StaticRouter> and the <BrowserRouter>. First one is for SSR purpose and use the express path validation for routes matching. Finally, the <BrowserRouter> are configure in client side for components match.
+This section include the authentication module. It means that application shows 'Login' or 'Logout' option, depends of the authentication state. For make it works, we introduce a proxy into the axios configuration in order to tell the api that can bypass the cookies and authenticate the request over the heroku test api.
+
+This authentication require a google account to work.
 
 
 for running this branch, try with:
