@@ -16,6 +16,11 @@ This section include the authentication module. It means that application shows 
 
 This authentication require a google account to work.
 
+# Styling
+
+For styling, I introduce materializecss files into the rendered file for giving some CSS styles to the entire demo app.
+
+# How to run
 
 for running this branch, try with:
 
