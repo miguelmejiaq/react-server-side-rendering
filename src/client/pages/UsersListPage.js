@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fecthUsers } from '../actions';
+import { fetchUsers } from '../actions';
 
 class UsersListPage extends Component {
     componentDidMount(){
-        this.props.fecthUsers();
+        this.props.fetchUsers();
     }
     renderUsers(){
         return this.props.users.map(user => {
@@ -26,11 +26,11 @@ function mapStateToProps(state) {
 }
 
 function loadData(store){
-    return store.dispatch(fecthUsers());
+    return store.dispatch(fetchUsers());
 }
 
 export { loadData }
 export default {
     loadData: loadData,
-    component: connect(mapStateToProps, { fecthUsers })(UsersListPage)
+    component: connect(mapStateToProps, { fetchUsers })(UsersListPage)
 };
